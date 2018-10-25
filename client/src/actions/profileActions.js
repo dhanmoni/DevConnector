@@ -87,7 +87,7 @@ export const getProfiles =() => dispatch => {
     .catch(
         err =>
             dispatch({
-                type: GET_PROFILES,
+                type: GET_ERRORS,
                 payload: null
             })
     )

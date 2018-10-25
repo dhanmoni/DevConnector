@@ -14,7 +14,7 @@ const validatePostInput = require('../../validation/post')
 //@routes GET api/posts/test
 //@desc   Test posts route
 //@access Public
-router.get('/test', (req, res)=> res.json({msg:'Posts work'}))
+router.get('/test', (req, res)=> Post.find().populate('user').then(posts=> res.json(posts)))
 
 
 //@routes GET api/posts/
